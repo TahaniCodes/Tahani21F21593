@@ -1,0 +1,24 @@
+public class SQA {
+    public static void main(String[] args) {
+        List<String> products = new ArrayList<String>();
+        products.add("laptop");
+        products.add("smartphone");
+        products.add("tablet");
+        products.add("smartwatch");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter product name to search: ");
+        String searchQuery = scanner.nextLine().trim(); 
+        if (searchQuery.isEmpty()) {
+            System.out.println("Please enter a valid search query.");}
+else {
+            List<String> matchingProducts = new ArrayList<String>()
+            for (String product : products) {
+                if (product.toLowerCase().contains(searchQuery.toLowerCase())) {D
+                    matchingProducts.add(product);}}
+            if (!matchingProducts.isEmpty()) {
+                System.out.println("Search Results:");
+                for (String item : matchingProducts) {
+                    System.out.println("- " + item);}}
+else {
+                System.out.println("No matching products found.");}}
+        scanner.close();}
